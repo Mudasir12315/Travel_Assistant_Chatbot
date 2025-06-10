@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Travel Assistant ChatGPT Style</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <div class="logo" tabindex="0" aria-label="Travel Assistant Logo">Travel Assistant</div>
+        <nav aria-label="Primary Navigation">
+            <button id="btnNewSession" aria-label="Start New Conversation">New Chat</button>
+            <button id="btnResetKey" aria-label="Reset API Key">Reset API Key</button>
+        </nav>
+    </header>
+
+    <main>
+        <aside class="sidebar" aria-label="Chat History and Sessions">
+            <div class="sidebar-header">Conversations</div>
+            <div class="session-list" tabindex="0" role="list" aria-live="polite"
+                aria-label="List of previous conversations">
+            </div>
+            <div class="sidebar-footer">
+                <button id="btnClearHistory" aria-label="Clear all conversation history">Clear All</button>
+            </div>
+        </aside>
+
+        <section class="chat-window" aria-live="polite" aria-atomic="false" aria-relevant="additions"
+            aria-label="Chat window">
+            <div class="hero" aria-label="App Intro Section">
+                <h1 tabindex="0">Your Smart Travel Assistant</h1>
+                <p tabindex="0">Ask me about destinations, tips, and travel planning advice.</p>
+            </div>
+            <div class="messages" id="messages" role="list" aria-label="Chat messages" tabindex="0"></div>
+            <form id="chatForm" class="input-area" aria-label="Chat input form" autocomplete="off" spellcheck="true">
+                <textarea id="inputMessage" placeholder="Type your question or message..." rows="1" required
+                    aria-required="true" aria-label="Message input"></textarea>
+                <button type="submit" id="btnSend" aria-label="Send message" disabled>Send</button>
+            </form>
+            <div class="footer-info" id="footerInfo" aria-live="polite" aria-atomic="true">
+                Powered by OpenRouter AI. Enter your OpenRouter API Key to start chatting.
+            </div>
+        </section>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
